@@ -8,6 +8,8 @@
   <artifactId>web-template-spring-boot-application</artifactId>
   <name>web-template-spring-boot-application</name>
   
+  <packaging>jar</packaging>
+  
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>

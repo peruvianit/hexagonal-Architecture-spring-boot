@@ -1,5 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.0.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  
   <groupId>io.peruvianit.template</groupId>
   <artifactId>web-template-spring-boot-2</artifactId>
   <version>2.0.0-SNAPSHOT</version>
@@ -9,8 +16,17 @@
   <packaging>pom</packaging>
   
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
     <lombok.version>1.18.8</lombok.version>
+    <commons-io.version>2.4</commons-io.version>
+    <user-agent-util.version>1.21</user-agent-util.version>
+    <com.nimbusds.version>7.9</com.nimbusds.version>
+    <oracle.version>11.2.0.3</oracle.version>
+    <org.apache.poi.version>4.1.2</org.apache.poi.version>
+    <org.jsoup.version>1.13.1</org.jsoup.version>   
+    <com.itextpdf.version>5.5.12</com.itextpdf.version>
+    <javamail.version>1.4.2</javamail.version>
   </properties>
   
   <dependencyManagement>
@@ -21,25 +37,81 @@
 		<version>${lombok.version}</version>
 		<optional>true</optional>
 	  </dependency>  
+
+      <!-- Librerie Apache -->
+
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+      
+      <!-- Librerie Aggiuntive -->
+
+      <dependency>
+        <groupId>eu.bitwalker</groupId>
+        <artifactId>UserAgentUtils</artifactId>
+        <version>${user-agent-util.version}</version>
+        <scope>compile</scope>
+      </dependency>
+  
+      <dependency>
+        <groupId>com.nimbusds</groupId>
+        <artifactId>nimbus-jose-jwt</artifactId>
+        <version>${com.nimbusds.version}</version>
+      </dependency>
+      
+      <!-- driver oracle -->
+      <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <scope>runtime</scope>
+     </dependency>
+          
+      <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc6</artifactId>
+        <version>${oracle.version}</version>
+      </dependency>
+
+      <!--  -->
+      <dependency>
+          <groupId>org.jsoup</groupId>
+          <artifactId>jsoup</artifactId>
+          <version>${org.jsoup.version}</version>
+      </dependency>
+            
+      <!-- Export XLSX -->
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>${org.apache.poi.version}</version>
+      </dependency>
+      
+      <!-- Export PDF -->
+      <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>itextpdf</artifactId>
+        <version>${com.itextpdf.version}</version>
+        <scope>compile</scope>
+      </dependency>
+  
+      <dependency>
+        <groupId>com.itextpdf.tool</groupId>
+        <artifactId>xmlworker</artifactId>
+        <version>${com.itextpdf.version}</version>
+        <scope>compile</scope>
+      </dependency>
+      
+      <!-- Javamail -->
+      <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>${javamail.version}</version>
+        <scope>provided</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>  
-      
-  <build>
-    <plugins>
-      <plugin>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-maven-plugin</artifactId>
-    </plugin>
-    
-      <plugin>    
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-            <source>${java.version}</source>
-            <target>${java.version}</target>
-        </configuration>
-    </plugin>
-    </plugins>
-  </build>
   
   <developers>
     <developer>
@@ -58,6 +130,6 @@
     <module>web-template-spring-boot-common</module>
     <module>web-template-spring-boot-configuration</module>
     <module>web-template-spring-boot-application</module>
-    <module>web-template-spring-boot-adapters</module>
+    <module>adapters/web-template-spring-boot-web</module>
   </modules>
 </project>

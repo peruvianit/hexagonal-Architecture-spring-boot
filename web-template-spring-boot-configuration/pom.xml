@@ -7,4 +7,6 @@
   </parent>
   <artifactId>web-template-spring-boot-configuration</artifactId>
   <name>web-template-spring-boot-configuration</name>
+  
+  <packaging>jar</packaging>
 </project>
