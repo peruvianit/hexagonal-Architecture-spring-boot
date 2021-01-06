@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: Web Template Spring Boot 2
+  jmx:
+    enabled: false
+  freemarker: 
+    template-loader-path: classpath:/templates/,classpath:org/springframework/web/servlet/view/freemarker
+    suffix: .ftl   
+    charset: UTF-8
+    
+server:
+  servlet:
+    context-path: /web-template-spring-boot-2
+    session:
+      timeout: 1800
+      
+  error:
+    whitelabel:
+      enabled: false
+      
+
+#logging:
+#  level:
+#    ROOT: DEBUG
