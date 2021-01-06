@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>it.istruzione.sidi.template</groupId>
+  <artifactId>web-template-spring-boot-2</artifactId>
+  <version>2.0.0-SNAPSHOT</version>
+  <name>web-template-spring-boot-2</name>
+  <description>Progetto web template spring boot 2</description>
+  
+  <packaging>pom</packaging>
+  
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+  
+  <build>
+    <plugins>
+      <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+    </plugin>
+    
+      <plugin>    
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+        </configuration>
+    </plugin>
+    </plugins>
+  </build>
+  
+  <developers>
+    <developer>
+      <name>Sergio Arellano {PerUViAn}</name>
+      <organization>3A Informatica</organization>     
+      <email>sergioarellanodiaz@gmail.com</email>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+  
+  <modules>
+    <module>web-template-spring-boot-common</module>
+    <module>web-template-spring-boot-configuration</module>
+    <module>web-template-spring-boot-application</module>
+    <module>web-template-spring-boot-adapters</module>
+  </modules>
+</project>
