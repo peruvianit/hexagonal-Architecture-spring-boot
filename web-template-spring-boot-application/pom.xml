@@ -7,4 +7,12 @@
   </parent>
   <artifactId>web-template-spring-boot-application</artifactId>
   <name>web-template-spring-boot-application</name>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+  </dependencies>
+  
 </project>

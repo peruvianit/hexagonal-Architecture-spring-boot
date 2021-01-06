@@ -10,8 +10,20 @@
   
   <properties>
     <java.version>1.8</java.version>
+    <lombok.version>1.18.8</lombok.version>
   </properties>
   
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>${lombok.version}</version>
+		<optional>true</optional>
+	  </dependency>  
+    </dependencies>
+  </dependencyManagement>  
+      
   <build>
     <plugins>
       <plugin>
@@ -31,10 +43,14 @@
   
   <developers>
     <developer>
+      <id>peruvianit</id>
       <name>Sergio Arellano {PerUViAn}</name>
-      <organization>3A Informatica</organization>     
       <email>sergioarellanodiaz@gmail.com</email>
-      <timezone>+1</timezone>
+      <timezone>UTC+01:00 (CET)</timezone>
+      <url>https://bit.ly/35dvXNW</url>
+      <roles>
+        <role>Full Stack Developer</role>
+      </roles>
     </developer>
   </developers>
   
