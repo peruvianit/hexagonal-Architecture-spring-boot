@@ -7,7 +7,7 @@ public class UrlFormatException extends APIException {
 
 	private static final long serialVersionUID = -5586794757011298498L;
 
-	UrlFormatException(String message) {
+	private UrlFormatException(String message) {
 		super(TypeError.URL_FORMAT_ERROR, message);
 	}
 

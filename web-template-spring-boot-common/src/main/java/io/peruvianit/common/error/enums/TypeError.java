@@ -13,8 +13,12 @@ package io.peruvianit.common.error.enums;
 public enum TypeError {
 	MISSING_PARAMETER_ERROR("101","Missing parameter"),
 	URL_FORMAT_ERROR("102","Error format url"),
+	UTENTE_NOT_FOUND_ERROR("103", "User not found"),
+	RESOURCE_ALREADY_EXISTS_ERROR("150", "Resource exists"),
 	
 	INVALID_TOKEN_ERROR("201","Token not valid"),
+	RESOURCE_NOT_AVAILABLE_ERROR("203", "Resource non available"),
+	
 	
 	INTERNAL_SERVER_ERROR("500", "Internal application error");
 

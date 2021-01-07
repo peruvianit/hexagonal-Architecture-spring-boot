@@ -7,7 +7,7 @@ public class MissingParameterException extends APIException {
 
 	private static final long serialVersionUID = -8093762472997016743L;
 
-	MissingParameterException(String messageMissingParam) {
+	private MissingParameterException(String messageMissingParam) {
 		super(TypeError.MISSING_PARAMETER_ERROR, messageMissingParam);
 	}
 
