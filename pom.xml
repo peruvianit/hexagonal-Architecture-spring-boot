@@ -27,6 +27,7 @@
     <org.jsoup.version>1.13.1</org.jsoup.version>   
     <com.itextpdf.version>5.5.12</com.itextpdf.version>
     <javamail.version>1.4.2</javamail.version>
+    <commons-lang3>3.0</commons-lang3>
   </properties>
   
   <dependencyManagement>
@@ -46,6 +47,11 @@
         <version>${commons-io.version}</version>
       </dependency>
       
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang3}</version>
+      </dependency>
       <!-- Librerie Aggiuntive -->
 
       <dependency>
