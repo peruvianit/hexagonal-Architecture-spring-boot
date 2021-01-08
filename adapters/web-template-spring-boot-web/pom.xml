@@ -40,6 +40,7 @@
   </dependencies>
   
   <build>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -61,5 +62,5 @@
     </plugins>
   </build>
   
-   <packaging>war</packaging>
+  <packaging>war</packaging>
 </project>

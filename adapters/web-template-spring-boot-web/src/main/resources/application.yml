@@ -10,7 +10,7 @@ spring:
     
 server:
   servlet:
-    context-path: /web-template-spring-boot-2
+    context-path: /web-template-spring-boot-web
     session:
       timeout: 1800
       
