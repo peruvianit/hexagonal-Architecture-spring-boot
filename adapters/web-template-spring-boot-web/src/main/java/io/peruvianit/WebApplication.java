@@ -4,8 +4,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Import;
+
+import it.peruvanit.config.ApplicationConfig;
+import it.peruvanit.config.WebConfiguration;
 
 @SpringBootApplication
+@Import({
+	ApplicationConfig.class, 
+	WebConfiguration.class
+	})
 public class WebApplication extends SpringBootServletInitializer  {
 	
 	@Override
