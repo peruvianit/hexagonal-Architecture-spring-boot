@@ -7,7 +7,8 @@ spring:
     template-loader-path: classpath:/templates/,classpath:org/springframework/web/servlet/view/freemarker
     suffix: .ftl   
     charset: UTF-8
-    
+  cache:
+    jcache:      config: classpath:ehcache.xml  
 server:
   servlet:
     context-path: /web-template-spring-boot-web

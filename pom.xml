@@ -54,6 +54,14 @@
         <version>2.0.0-SNAPSHOT</version>
       </dependency>
       
+      <!-- Progetto di esempio per le feactures -->
+      <dependency>
+        <groupId>io.peruvianit.template</groupId>
+        <artifactId>web-template-spring-boot-sample</artifactId>
+        <scope>compile</scope>
+        <version>2.0.0-SNAPSHOT</version>
+      </dependency>
+      
       <!-- Lombok -->
       <dependency>
 		<groupId>org.projectlombok</groupId>
@@ -147,6 +155,7 @@
     <module>web-template-spring-boot-configuration</module>
     <module>web-template-spring-boot-application</module>
     <module>adapters/web-template-spring-boot-web</module>
+    <module>web-template-spring-boot-sample</module>
   </modules>
   
   <developers>

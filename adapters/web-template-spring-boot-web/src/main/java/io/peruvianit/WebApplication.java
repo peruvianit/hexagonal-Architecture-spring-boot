@@ -7,12 +7,14 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Import;
 
 import it.peruvanit.config.ApplicationConfig;
+import it.peruvanit.config.CacheConfig;
 import it.peruvanit.config.WebConfiguration;
 
 @SpringBootApplication
 @Import({
 	ApplicationConfig.class, 
-	WebConfiguration.class
+	WebConfiguration.class,
+	CacheConfig.class
 	})
 public class WebApplication extends SpringBootServletInitializer  {
 	
