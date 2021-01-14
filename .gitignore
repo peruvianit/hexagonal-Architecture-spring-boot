@@ -36,6 +36,7 @@ target/
 .classpath
 .project
 .factorypath
+bin/
 
 # NetBeans specific
 nbproject/private/
@@ -55,3 +56,6 @@ nb-configuration.xml
 release.properties
 pom.xml.releaseBackup
 pom.xml.tag
+
+# Log
+web-template-spring-boot-2*.log
