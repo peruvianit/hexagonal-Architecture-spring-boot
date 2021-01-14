@@ -1,14 +1,11 @@
 package io.peruvianit.web.controller.home;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import io.peruvianit.sample.ehcache.service.EhcacheService;
 import it.peruvanit.config.ApplicationConfig;
 
 @Controller
