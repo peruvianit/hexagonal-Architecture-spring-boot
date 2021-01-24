@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /web-template-spring-boot-web-2
+  port: 8081
