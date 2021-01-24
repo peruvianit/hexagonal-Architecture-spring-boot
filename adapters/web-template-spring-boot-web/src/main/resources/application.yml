@@ -23,3 +23,7 @@ server:
 #logging:
 #  level:
 #    ROOT: DEBUG
+
+# configurazione di default, viene fatto override per svilupo locale in application-dev.properties
+logging:
+  config: file:${catalina.home}/conf/web-template-spring-boot-web.log4j2.xml

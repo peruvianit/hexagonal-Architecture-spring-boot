@@ -3,8 +3,8 @@ package io.peruvianit.web.advice;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -24,7 +24,7 @@ import io.peruvianit.common.error.exception.UserNotFoundException;
 @ControllerAdvice
 public class ExceptionHandlerControllerAdvise {
 
-	private static Logger logger =LoggerFactory.getLogger(ExceptionHandlerControllerAdvise.class);
+	private static final Logger logger = LogManager.getLogger(ExceptionHandlerControllerAdvise.class);
 
 	@ExceptionHandler(value = { MissingParameterException.class, UrlFormatException.class })
 
