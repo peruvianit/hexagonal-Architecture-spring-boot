@@ -12,8 +12,8 @@
 
 	<Appenders>
 		<RollingRandomAccessFile name="FILE" 
-			fileName="${sys:catalina.home}/logs/rilevazione-assenze.${hostName}.log"
-			filePattern="${sys:catalina.home}/logs/rilevazione-assenze.${hostName}.%d{yyyy-MM-dd}.log.gz">
+			fileName="${sys:catalina.home}/logs/web-template-spring-boot-web.${hostName}.log"
+			filePattern="${sys:catalina.home}/logs/web-template-spring-boot-web.${hostName}.%d{yyyy-MM-dd}.log.gz">
 			<PatternLayout pattern="${FILE_LOG_PATTERN}" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" />
@@ -24,7 +24,7 @@
 		<AsyncRoot level="info" includeLocation="true">
 			<AppenderRef ref="FILE" />
 		</AsyncRoot>
-		<AsyncLogger name="it.dxc.miur.rilevazioneassenze" level="info" />
+		<AsyncLogger name="it.peruvianit" level="info" />
 		<AsyncLogger name="org.springframework.web" level="info" />
 		<AsyncLogger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" level="info" />
 		<AsyncLogger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="info" />
