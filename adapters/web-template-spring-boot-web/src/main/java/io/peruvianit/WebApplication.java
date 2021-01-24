@@ -15,7 +15,9 @@ import it.peruvanit.config.WebConfiguration;
 	CacheConfig.class
 	})
 public class WebApplication {
+	
 	public static void main(String[] args) {
 		SpringApplication.run(WebApplication.class, args);
 	}
+	
 }
